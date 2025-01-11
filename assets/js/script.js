@@ -49,7 +49,8 @@ filter.forEach((element) => {
   });
 });
 
-/* Ho reso selezionabili i tag nell'aside, anche se non hanno ulteriori effetti */
+/* Ho reso selezionabili i tag nell'aside, anche se non hanno ulteriori effetti, 
+avrei voluto far sì che filtrasse le notizie ma nessuno dei tag era compatibile, e credo avrei dovuto aggiungerli direttamente con JS */
 
 let bookmarks = document.querySelectorAll(".bookmarkImg");
 
