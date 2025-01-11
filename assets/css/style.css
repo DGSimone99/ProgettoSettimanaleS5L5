@@ -524,3 +524,7 @@ img {
   background-color: #747577;
   color: white;
 }
+
+.bookmark:active {
+  transform: scale(120%);
+}
