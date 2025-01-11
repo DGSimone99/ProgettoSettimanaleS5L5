@@ -33,8 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  setInterval(random, 1000);
+  setInterval(random, 500);
 });
 
 /* Avevo intuito correttamente che dovevo ciclare le M e cambiarne l'opacità, 
-ma ho chiesto a ChatGPT quale parte dell'SVG doveva essere ciclato, ovvero g[transform^="matrix"]*/
+ma ho chiesto a ChatGPT quale parte dell'SVG doveva essere ciclato, ovvero g[transform^="matrix"]
+A volte scompaiono tutti insieme e ricompaiono dopo un po', ma non ho ben capito il motivo*/

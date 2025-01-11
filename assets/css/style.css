@@ -107,9 +107,10 @@ h1 {
 }
 .mediumDiv {
   position: absolute;
-  width: 550px;
-  left: 60%;
+  width: 600px;
+  left: 65%;
   right: 0;
+  bottom: 0;
 }
 
 /* TRENDING */
