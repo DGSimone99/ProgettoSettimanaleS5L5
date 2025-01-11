@@ -27,11 +27,11 @@ function random() {
       } else {
         mRand.style.opacity = "0";
       }
-    }, index * 300);
+    }, index * 500);
   });
 }
 
-setInterval(random, 300);
+setInterval(random, 500);
 
 /* Avevo intuito correttamente che dovevo ciclare le M e cambiarne l'opacità, 
 ma ho chiesto a ChatGPT quale parte dell'SVG doveva essere ciclato, ovvero g[transform^="matrix"]
