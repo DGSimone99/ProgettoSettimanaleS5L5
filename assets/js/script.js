@@ -29,13 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           mRand.style.opacity = "0";
         }
-      }, index * 1000);
+      }, index * 300);
     });
   }
 
-  setInterval(random, 500);
+  setInterval(random, 300);
 });
 
 /* Avevo intuito correttamente che dovevo ciclare le M e cambiarne l'opacità, 
 ma ho chiesto a ChatGPT quale parte dell'SVG doveva essere ciclato, ovvero g[transform^="matrix"]
-A volte scompaiono tutti insieme e ricompaiono dopo un po', ma non ho ben capito il motivo*/
+A volte scompaiono tutti insieme e ricompaiono dopo un po', ma non ne ho capito il motivo e a volte bisogna ricaricare la pagina*/
