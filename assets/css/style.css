@@ -15,6 +15,8 @@ body {
 header {
   background-color: #ffc017;
   border-bottom: solid 0.1em black;
+  position: relative;
+  overflow: hidden;
 }
 
 nav img {
@@ -34,8 +36,21 @@ nav {
   background-color: white;
 }
 
+.nav,
+#hero,
+h2,
+.trending,
+article {
+  width: 80%;
+}
+
+main,
+article {
+  font-size: 1.1em;
+}
+
 .nav {
-  width: 75%;
+  width: 80%;
   margin-inline: auto;
   display: flex;
   list-style: none;
@@ -60,16 +75,14 @@ a li {
   padding: 0.5em 1.5em;
   color: white;
   border: none;
-  transition: background-color 0.5s, color 0.5s;
+  transition: background-color 0.5s;
 }
 
 .green {
   background-color: #1a8917;
-  color: white;
 }
 
 #hero {
-  width: 75%;
   margin-inline: auto;
   position: relative;
 }
@@ -94,19 +107,18 @@ h1 {
 }
 .mediumDiv {
   position: absolute;
-  height: 420px;
+  width: 550px;
+  left: 60%;
   right: 0;
 }
 
 /* TRENDING */
 
 .trending {
-  width: 75%;
   margin-inline: auto;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5%;
   margin-bottom: 4em;
 }
 
@@ -114,19 +126,19 @@ h2 {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-block: 3em 1.5em;
+  margin-top: 3em;
   font-weight: bold;
   text-transform: uppercase;
   margin-inline: auto;
-  width: 75%;
 }
 
 .post {
   display: flex;
-  margin-block: 1em;
-  padding: 1em;
-  width: 25%;
+  padding: 2em;
+  width: 30%;
   cursor: pointer;
+  padding-inline: 0;
+  padding-right: 1.5em;
 }
 
 .post:hover {
@@ -182,7 +194,6 @@ h2 {
 
 article {
   padding-top: 4em;
-  width: 75%;
   margin-inline: auto;
   display: flex;
   gap: 4em;
@@ -276,42 +287,27 @@ img {
 }
 
 @media screen and (min-width: 741px) and (max-width: 1080px) {
-  .nav {
+  .nav,
+  #hero,
+  article,
+  .trending,
+  h2,
+  .news {
     width: 90%;
-  }
-  #hero {
-    width: 90%;
-    padding-top: 6em;
-  }
-  article {
-    width: 90%;
-  }
-
-  h1,
-  #hero div {
-    width: 580px;
-    padding-top: 0;
-    z-index: 1;
-    background-color: radial-gradient(circle, rgba(0, 212, 255, 0) 0%, #ffc017 100%);
-    background-color: #ffc017;
-    box-shadow: 10px 10px 75px 15px #ffc017;
   }
 
   .mediumDiv {
-    z-index: 0;
+    left: 65%;
   }
 
-  .trending {
-    width: 90%;
-  }
   h2 {
-    width: 90%;
     margin-bottom: 0.5em;
   }
 
-  .post {
+  .trending .post {
     width: 40%;
     padding-top: 0;
+    padding-right: 3.5em;
   }
 
   .date {
@@ -326,10 +322,38 @@ img {
     flex-direction: column;
   }
 
+  .postPic {
+    width: 112%;
+  }
+
+  article .date {
+    display: inline-block;
+  }
+
+  .date > img {
+    transform: translateY(25%);
+  }
+
+  article .post {
+    width: 100%;
+    position: relative;
+  }
+
+  .bookmark {
+    position: absolute;
+    right: 0;
+    bottom: 30px;
+  }
+
+  .post:hover .date span {
+    background-color: #9e9fa2;
+    color: white;
+  }
+
   aside {
     order: -1;
     height: 200px;
-    position: inherit;
+    position: static;
   }
 
   footer {
@@ -338,11 +362,12 @@ img {
 }
 
 @media screen and (max-width: 740px) {
-  h1 {
-    width: 100%;
-  }
-
-  .nav {
+  .nav,
+  #hero,
+  article,
+  .trending,
+  h2,
+  .news {
     width: 90%;
   }
 
@@ -350,27 +375,17 @@ img {
     display: none;
   }
 
-  .medium {
-    display: none;
-  }
-
-  #hero {
-    width: 90%;
-  }
-  article {
-    width: 90%;
-  }
-  .trending {
-    width: 90%;
-  }
   h2 {
-    width: 90%;
     margin-bottom: 0.5em;
   }
 
   .post {
     width: 100%;
     padding-top: 0;
+  }
+
+  .postPic {
+    width: 112%;
   }
 
   .date {
@@ -385,6 +400,25 @@ img {
     flex-direction: column;
   }
 
+  article .date {
+    display: inline-block;
+  }
+
+  .date > img {
+    transform: translateY(25%);
+  }
+
+  article .post {
+    width: 100%;
+    position: relative;
+  }
+
+  .bookmark {
+    position: absolute;
+    right: 0;
+    bottom: 32px;
+  }
+
   aside {
     order: -1;
     height: 200px;
@@ -396,9 +430,46 @@ img {
   }
 }
 
-@media screen and (max-width: 564px) {
+@media screen and (max-width: 660px) {
+  header,
+  nav,
+  article {
+    font-size: 95%;
+  }
   .postImg img {
     width: 10em;
     height: auto;
+  }
+  h2,
+  .trending,
+  .news {
+    width: 95%;
+  }
+
+  h2 {
+    padding-bottom: 1em;
+  }
+
+  .postPic {
+    width: 105%;
+  }
+
+  .bookmark {
+    position: absolute;
+    right: 0;
+    bottom: 27px;
+  }
+
+  .date span {
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 492px) {
+  header,
+  nav,
+  .hero,
+  article {
+    font-size: 90%;
   }
 }

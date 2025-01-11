@@ -37,4 +37,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Avevo intuito correttamente che dovevo ciclare le M e cambiarne l'opacità, 
-ma ammetto di aver chiesto a ChatGPT quale parte dell'SVG doveva essere ciclato, ovvero g[transform^="matrix"]*/
+ma ho chiesto a ChatGPT quale parte dell'SVG doveva essere ciclato, ovvero g[transform^="matrix"]*/
