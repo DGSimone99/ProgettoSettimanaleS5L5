@@ -18,9 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   let m = document.querySelectorAll('g[transform^="matrix"]');
+  m = Array.from(m);
 
   function random() {
-    let rand = Array.from(m).sort(() => Math.random() - 0.5);
+    let rand = m.sort(() => Math.random() - 0.5);
 
     rand.forEach((mRand, index) => {
       setTimeout(() => {

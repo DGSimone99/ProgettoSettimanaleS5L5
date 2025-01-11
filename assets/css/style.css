@@ -150,6 +150,11 @@ h2 {
   color: black;
 }
 
+.post:hover .date span {
+  background-color: #9e9fa2;
+  color: white;
+}
+
 .number {
   font-size: 2em;
   font-weight: bold;
@@ -344,11 +349,6 @@ img {
     position: absolute;
     right: 0;
     bottom: 30px;
-  }
-
-  .post:hover .date span {
-    background-color: #9e9fa2;
-    color: white;
   }
 
   aside {
